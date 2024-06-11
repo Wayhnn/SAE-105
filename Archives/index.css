@@ -1,0 +1,208 @@
+.carousel {
+    display: flex;
+    justify-content: space-around;
+}
+
+#affiche_aside {
+    position: sticky;
+    top: 10px;
+    right: 0px;
+    bottom: 0;
+    margin: 10px 0;
+    height: 20%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5em;
+}
+
+.keywords {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-decoration: underline;
+    color: var(--white);
+    
+}
+
+#acceuil > div{
+    display: flex;
+    flex-direction: row;
+    clear: both;
+}
+
+#acceuil > section > div {
+    display: flex;
+}
+
+#presse, #communaute {
+    float: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#communaute
+{
+    float: right;
+}
+
+#presse > header > h2, #communaute > header > h2
+{
+    color: var(--white);
+}
+
+#presse > header, #communaute > header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    background-color: var(--primary-color);
+}
+
+.critique
+{
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    box-shadow: rgba(0, 0, 0, 0.24) -1px 5px 11px;
+}
+
+.critique > div
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.critique > aside
+{
+    width: 20%;
+}
+
+.critique > div
+{
+    width: 60%;
+}
+
+.critique > div > div > div 
+{
+    padding-top: 10px;
+    height: 25px;
+    display: flex;
+    align-items: center ;
+}
+.critique div > img
+{
+    width: 30px;
+    padding: 0;
+}
+
+.critique > aside{
+    margin-top: 50px ;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.critique > aside > img
+{
+    border-radius: 50%;
+}
+
+.critique > div > *
+{
+    padding: 10px;
+}
+
+hr{
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    clear: both;
+}
+
+#acceuil > div > div {
+    width: 85%;
+}
+
+#acceuil > div > div > section > div{
+    display : flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5em;
+}
+
+
+.info-syno > nav{
+    padding: 1.5em 0;
+    margin-top: 2em;
+}
+
+.info-syno > nav > ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+}
+
+.info-syno > nav > ul > li{
+    margin: 0 3em;
+    font-size: 1.5em;
+}
+
+.info-syno > nav > ul > li > a{
+    text-decoration: none;
+    color: #fcfcfcfc;
+    padding: 0.2em;
+    border-radius: 10px;
+}
+
+.info-syno > article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-syno > article > div > p{
+    padding: 0 2em;
+}
+
+.titre_critique{
+    display: flex;
+    justify-content: center;
+}
+
+.titre_critique > h2{
+    color: #fcfcfcfc;
+}
+
+#acceuil > div{
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 1001px){
+    #acceuil > div > hr{
+        display: none;
+    }
+
+    #acceuil > div > div {
+        width: 100%;
+    }
+}

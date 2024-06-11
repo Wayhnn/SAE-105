@@ -1,0 +1,311 @@
+/* ************* Icône et Pseudo ************* */
+#compte article#informations>div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: space-evenly;
+}
+
+#compte article#informations>div>div {
+    display: flex;
+    flex-direction: column;
+
+    width: 15%;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+#compte article#informations>div>div>img {
+    height: 175px;
+}
+
+#compte article#informations>div>div>input {
+    display: block;
+    width: 175px;
+
+    text-align: center;
+    padding: 5px 10px;
+
+    border-radius: 10px;
+    
+    background-color: var(--background-color);
+    border-color: var(--border-initial-color);
+    border-style: solid;
+
+    /* border: 5px solid pink; */
+}
+
+/* ************* Tuiles ************* */
+#compte article#informations>div>div+div {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-around;
+
+    /* border: 5px solid pink; */
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.2) -1px 5px 12px;  
+
+}
+
+#compte #nombres {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#compte .tuile {
+    width: 150px;
+
+    margin: 0 25px;
+    border-radius : 5px;
+
+    text-align: center;
+}
+
+#compte .tuile>p.tNombre {
+    font-weight: bold;
+}
+
+/* ************* Inputs ************* */
+#compte #inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    align-items: start;
+    /* border: 5px solid pink; */
+
+}
+
+#compte #inputs>div {
+    width: 45%;
+    padding: 2px 50px;
+    border-radius: 10px;
+    /* border: 5px solid pink; */
+
+}
+
+#compte #inputs>div>label {
+    margin-bottom: 0;
+    /* border: 5px solid pink; */
+
+}
+
+#compte #inputs>div>input {
+    display: block;
+    width: 100%;
+
+    padding: 5px 10px;
+    
+    background-color: var(--background-color);
+    border-color: var(--border-initial-color);
+    border-style: solid;
+    border-radius: 10px;
+    /* border: 5px solid pink;  */
+
+}
+
+/* ************* Films vus ************* */
+#compte #films_vus > div {
+    display : flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-around;
+
+    /* border: 5px solid pink;  */
+}
+
+#compte .prev,#compte  .next{
+    width: 50px;
+    height: 50px;
+}
+
+/* ************* Critiques ************* */
+#compte #critiques > div {
+    display: flex;
+}
+
+#compte .critique
+{
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 85%;
+    box-shadow: var(--box-shadow) -1px 5px 11px;
+}
+
+#compte .critique > div
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#compte .critique > div
+{
+    width: 60%;
+}
+
+#compte .critique > aside > div > div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#compte .critique > aside > div > div > div 
+{
+    padding-top: 5px;
+    height: 25px;
+    display: flex;
+    align-items: center ;
+}
+
+#compte .critique > aside {
+    align-self: flex-start;
+}
+
+#compte .critique > div > *
+{
+    padding: 10px;
+}
+
+/* ************* Media queries ************* */
+
+@media screen and (max-width : 450px){
+    /* ************* Icône et Pseudo ************* */
+    #compte article#informations > div {
+        flex-direction: column;
+        align-items:center;
+
+    }
+
+
+    #compte article#informations>div>div {
+        display: flex;
+        flex-direction: column;
+
+        width: 20vw;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    #compte article#informations>div>div>img {
+        height: 100px;
+    }
+
+    #compte article#informations>div>div>input {
+        display: block;
+        width: 175px;
+
+        text-align: center;
+        padding: 5px 10px;
+
+        
+        background-color: var(--background-color);
+        background-color: var(--background-color);
+        border-radius: 10px;
+        border-color: var(--border-initial-color);
+        border-style: solid;
+
+        /* border: 5px solid pink; */
+    }
+    /* ************* Tuiles ************* */
+    #compte #nombres {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        align-items: center;
+        justify-content: space-around;
+
+        /* border: 5px solid pink; */
+    }
+
+    #compte .tuile {
+        width: 100px;
+    }
+
+    #compte .tuile>p.tNombre {
+        font-weight: bold;
+    }
+
+    /* ************* Inputs ************* */
+    #compte article#informations>div>div+div {
+        width: 95%;
+    }
+    
+    #compte #inputs {
+        flex-direction: column;
+
+        align-self: start;
+
+        /* border: 5px solid pink; */
+    }
+
+    #compte #inputs > div {
+        padding : 0;
+        width: 100%;
+        /* border: 5px solid pink; */
+    }
+
+    #compte #inputs > div > input {
+        padding: 5px 10px;
+
+        width: 90%;
+    }
+
+    /* ************* Critiques ************* */
+    #compte #critiques > div {
+        width: 100%;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+
+        /* border: 5px solid pink; */
+    }
+
+    #compte .critique {
+        justify-content: center;
+        align-items: start;
+
+        width: 75%;
+        border: none;
+
+        /* border: 5px solid pink; */
+    }
+
+    #compte .critique > div
+    {
+        align-self: auto;
+        width: 100%;
+    }
+
+    #compte .critique > div > p {
+        margin: 0;
+    }
+
+    #compte .critique > aside {
+        margin: 0;
+    }
+
+    #compte .critique > aside > h3 {
+        margin: 0;
+    }
+}

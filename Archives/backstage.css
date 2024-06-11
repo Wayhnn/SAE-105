@@ -1,0 +1,337 @@
+#backstage .stop_scroll {
+    overflow: hidden;
+}
+
+#backstage .show_filigrane {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    z-index: 5;
+}
+
+#backstage div.filigrane:not(.show_filigrane) {
+    display: none;
+}
+
+#backstage #interview > h2 + div > article > img + img {
+    display: none;
+}
+
+#backstage main {
+    display: flex;
+    flex-direction: row;
+}
+
+#backstage main > section {
+    display: flex;
+    flex-direction: column;
+}
+
+#backstage section {
+    margin-right: -200px;
+    width: 100%;
+}
+
+#backstage article {
+    width: 80%;
+}
+
+#backstage main > article > div > article {
+    display: flex;
+    flex-direction: column;
+}
+
+#backstage article > img {
+    width: 50%;
+}
+
+#backstage article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#backstage #hors-caméra > div{
+    background-image: url(images/hors-caméra/wallpaper.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#backstage .carousel {
+    display: flex;
+    justify-content: space-around;
+    backdrop-filter: blur(5px);
+    align-items: center;    
+}
+
+#backstage .carousel > .images {
+    width: 25vw;
+    height: auto;
+}
+
+#backstage h2.sous-titre {
+    justify-content: center;
+    background-color: var(--primary-color); 
+    width: 100%;
+    border-radius: 0;   
+}
+
+
+#backstage article + aside > img {
+    display: none;
+}
+
+#backstage #interview > h2 + div > div > article {
+    margin: 30px 15px;
+    color: var(--text-color);
+    box-shadow: var(--border-primary-color) -1px 5px 11px;
+    border-radius: 15px;
+    text-align: justify;    
+}
+
+#backstage #interview > div > div > article > img {
+    height: 50px;
+    width: 50px;
+}
+
+#backstage #interview > h2 + div > div  > article > img {
+    width: 8%;
+    padding: 10px;
+}
+
+#backstage #interview > h2 + div > div > article > p + img {
+    margin-left: 85%;
+}
+
+#backstage #interview > h2 + div > div > article > p {
+    padding: 20px;
+}
+
+#backstage #interview > h2 + div > div + div > article {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    width: auto;
+    border-radius: 15px;
+    padding : 5px 15px;
+    transition: 0.1s;
+    margin: 30px 15px;
+}
+
+#backstage #interview > h2 + div > div + div > article:not(.choisi) {
+    box-shadow: var(--border-primary-color ) -1px 5px 11px;
+    border: solid 2px var(--border-primary-color);
+}
+
+#backstage #interview > h2 + div > div + div > article:hover {
+    transform: scale(1.05);
+    transform: translateX(-15px);
+    transition: 0.1s;
+}
+
+#backstage #interview > h2 + div + div > article > img {
+    width: 100%;
+    padding-right: 25px;
+}
+
+#backstage #interview > div{
+    display: flex;
+    flex-direction: row;
+}
+
+#backstage #interview > h2 + div > div > article > img + img {
+    display: none;
+}
+
+#backstage #citation_div > article {
+    width: 90%;
+}
+
+#backstage .choisi {
+    box-shadow: var(--border-secondary-color) -1px 5px 11px;
+    border: solid 2px var(--border-secondary-color);
+}
+
+#backstage .poignet_anecdote {
+    z-index: 10;
+}
+
+#backstage .poignet_anecdote > img {
+    position: absolute;
+    top: 350px;
+    right: 0;
+    background-color: var(--primary-color);
+    width: 3%;
+    padding: 5px 50px;
+    margin-right: -50px;
+    border-radius: 50px 50px 0 0;
+    border: 3px solid var(--border-primary-color);
+}
+
+#backstage .liste_show > img {
+    top: 350px;
+    border-radius: 0 0 50px 50px;
+    transform: rotate(90deg);
+}
+
+#backstage .liste_anecdotes {
+    background-color: var(--primary-color);
+    width: 500px;
+    height: auto;
+    position: absolute;     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    right: 200px;
+    top: 0;
+    z-index: 8;
+}
+
+#backstage .hide {
+    display: none;
+}
+
+#backstage .anecdote {
+    width: 300px;
+    height: 100px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 40px;
+    margin: 30px 0;
+    display: flex;
+    align-items: center ;
+    font-size: 1.3em;
+}
+
+#backstage .poignet_telephone {
+    display: none;
+}
+
+@media screen and (max-width: 629px) {
+
+    #backstage .poignet_telephone {
+        position: sticky;
+        top: 0;
+        right: 0;
+        height: fit-content;
+        width: fit-content;
+        z-index: 10;
+        display: block;
+    }
+
+    #backstage .liste_anecdotes {
+        background-color: var(--primary-color);
+        width: 350px;
+        padding: 50px 100px 50px 50px;
+        height: fit-content;
+        position: sticky;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        right: 0px;
+    }
+
+    #backstage .liste_show_phone, #backstage .liste_show_phone * {
+        position: sticky;
+        bottom: 0;
+    }
+
+    #backstage .anecdote {
+        width: 150px;
+        height: 75px;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        border-radius: 10px;
+        margin: 15px 0;
+        display: flex;
+        align-items: center ;
+        font-size: 1.3em;
+    }
+
+    #backstage .hide {
+        display: none;
+    }
+
+    #backstage .poignet_anecdote {
+        display: none;
+    }
+
+    #backstage aside#affiche_aside {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #backstage #interview {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #backstage #interview > h2 + div > div > article > img {
+        display: none;
+    }
+
+    #backstage #interview > h2 + div > div > article {
+        width: 50%;
+        margin: 10px auto;
+    }
+
+    #backstage #interview > h2 + div > div + div > article {
+        color: var(--text-color);
+        margin: 5px auto;
+        box-shadow: var(--text-color) -1px 5px 11px;
+
+        width: 49%;
+    }
+
+    #backstage #interview > h2 + div > div > article > img + img {
+        display: block;
+        position: relative;
+        left: 45%;
+        right: 45%;
+    }
+
+    #backstage #interview > h2 + div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #backstage section {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #backstage article {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    #backstage #affiche_aside + aside > img {
+        background-color: var(--primary-color);
+        display: block;
+        width: 12vw;
+
+        border-radius: 0 0 0 20px;
+        padding: 5px;
+    }
+
+    #backstage #citation_div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+}
+

@@ -1,0 +1,212 @@
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+section
+{
+    float: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+section + section
+{
+    float: right;
+}
+
+section > header > h2
+{
+    color: var(--white);
+}
+
+section > header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+}
+
+.critique
+{
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    box-shadow: var(--box-shadow) -1px 5px 11px;
+}
+
+.critique > div
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.critique > aside
+{
+    width: 20%;
+}
+
+.critique > div
+{
+    width: 60%;
+}
+
+.critique > div > div > div 
+{
+    padding-top: 10px;
+    height: 25px;
+    display: flex;
+    align-items: center ;
+}
+.critique div > img
+{
+    width: 30px;
+    padding: 0;
+}
+
+.critique > aside{
+    margin-top: 50px ;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.critique > aside > img
+{
+    border-radius: 50%;
+}
+
+.critique > div > *
+{
+    padding: 10px;
+}
+
+.critique h3{
+    text-align: center;
+}
+
+footer
+{
+    clear: both;
+}
+
+hr{
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (min-width : 840px){
+    #communaute, #presse{
+        display: flex;
+    }
+}
+
+@media screen and (max-width : 1000px){
+    .critique{
+        scale: 0.8;
+    }
+}
+
+@media screen and (max-width : 840px){
+
+    main{
+        flex-direction: column;
+    }
+
+    main > nav, main > nav > ul
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main > nav > ul
+    {
+        list-style: none;
+        padding: 0;
+        margin: 15px 0;
+    }
+
+    main > nav > ul > li 
+    {
+        margin: 10px;
+    }
+
+    main > nav > ul > li > a, main > nav > ul > li > a.isDisable
+    {
+        display: block;
+        width: 150px;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        transition: 0.2s;
+        border-radius: 5px;
+    }
+
+    main > nav > ul > li > a.isDisable
+    {
+        border-color: var(--secondary-color);
+        cursor: default;
+        pointer-events: none;        
+    }
+
+    /*Hover effect*/
+
+    main > nav > ul > li > a:hover
+    {
+        transition: 0.2s;
+        background-color: var(--primary-color);
+        color: var(--background-color);
+    }
+
+    /*Désactiver le bouton actif*/
+    main > nav > ul > li > a.isDisable:hover 
+    {
+        transition: none;
+        transform: none;
+    }
+
+    section{
+        float: none;
+        width: 100%;
+    }
+    .critique{
+        flex-direction: column;
+        align-items: center;
+        scale: 1.0;
+    }
+
+    .critique > *
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .critique > aside, .critique > div
+    {
+        align-self: auto;
+        width: 100%;
+    }
+
+    section > header, hr
+    {
+        display: none;
+    }
+
+    /*Utile pour gérer l'apparition et la disparition en JS*/
+    .isHide
+    {
+        display: none;
+    }
+}

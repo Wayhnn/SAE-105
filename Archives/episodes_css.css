@@ -1,0 +1,189 @@
+#episodehtml{
+    display: flex;
+    flex-direction: row;
+}
+
+.main_section{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.liste_episode > article{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 5px 0;
+}
+
+.avis_general{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 5px 5px;
+}
+.avis_general > div{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.avis_general > div > img{
+    width: 90px;
+    height: 99px;
+}
+.avis_general > p{
+    padding: 0 25px;
+}
+
+#episodehtml > section > article > img{
+    width: 261px;
+    height: 138px;
+    margin: 0px 5px;
+}
+
+#episodehtml > hr{
+    color: #001166;
+}
+
+.choix_saison{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0;
+}
+
+.choix_saison > p{
+    padding: 0.5em;
+    font-size: 2em;
+}
+
+.choix_saison > a > div > img{
+    transform: rotate(180deg);
+    width: 20%;
+    margin-left: 0.4em;
+}
+
+.choix_saison > a > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+.choix_saison > a > div > p{
+    margin: 0.2em 0 0.2em 0;
+}
+
+.choix_saison > a{
+    text-decoration: none;
+    color: #fcfcfc;
+}
+
+.choix_saison > a > div:hover{
+    text-decoration: none;
+    background-color: #0029ff;
+}
+
+.liste_episode > article > div > p{
+    font-size: 1.2em;
+}
+
+/*Gestion de la navigation entre les saisons*/
+#nav-saison
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-saison>ul>li{
+    list-style: none;
+    padding: 50px 0;
+    font-size:2em ;
+    transition: 0.2s;
+}
+
+#nav-saison>ul>li>a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+#nav-saison>ul>li:hover{
+    transition: 0.2s;
+    scale: 1.2;
+}
+
+#nav-saison>ul>li:hover>a{
+    transition: 0.2s;
+    color: var(--secondary-color);
+}
+
+#opacity {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--black);
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    opacity: 0.98;
+}
+
+
+#opacity.active 
+{
+    display: block;
+}
+
+#nav-saison.active
+{
+    display: flex;
+}
+
+
+@media screen and (max-width: 429px) {
+
+    .avis_general > div > img{
+        width: 38px;
+        height: 40px;
+    }
+
+    .main_section{
+        width: 100%;
+    }
+
+    .avis_general > p{
+        padding: 0 25px;
+    }
+
+    .choix_saison > p{
+        display: none;
+    }
+
+    .main_section > section > article{
+        flex-direction: column;
+        align-items: center;
+    }
+    .main_section > section > article > div{
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 1001px){
+    #episodehtml > hr{
+        display: none;
+    }
+
+    .main_section{
+        width: 100%;
+    }
+}
